@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soal 5</title>
+</head>
+<body>
+    <h1>Suara Hewan</h1>
+    <p>Pilih Suara:
+      <select id="suara">
+        <option value="meong">meong</option>
+        <option value="guguk">guguk</option>
+      </select>
+    </p>
+    <button onclick="tampilkanSuara()">Tampilkan Suara</button>
+    <p id="hasil"></p>
+
+    <script>
+        function tampilkanSuara() {
+          const suaraSelect = document.getElementById("suara");
+          const hasilHewan = document.getElementById("hasil");
+    
+          const suara = suaraSelect.value;
+    
+          if (suara === "meong") {
+            hasilHewan.textContent = "Suara kucing!";
+          } else if (suara === "guguk") {
+            hasilHewan.textContent = "Suara anjing!";
+          }
+        }
+      </script>
+</body>
+</html>

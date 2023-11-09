@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soal 6</title>
+</head>
+<body>
+    <h1>Jenis Smartphone</h1>
+    <p>Masukkan spesifikasi smartphone:</p>
+    <input type="text" id="spesifikasiInput" >
+    <button onclick="tampilkan()">Tampilkan</button>
+    <p id="hasil"></p>
+  
+    <script>
+         function tampilkan() {
+        const spesifikasiInput = document.getElementById("spesifikasiInput");
+        const hasilJenis = document.getElementById("hasil");
+  
+        const spesifikasi = spesifikasiInput.value;
+  
+        if (spesifikasi.includes("10MP")) {
+          hasil.textContent = "Kamera";
+        } else if (spesifikasi.includes("128GB")) {
+          hasil.textContent = "Memori";
+        } else {
+          hasil.textContent = "Tidak dikenali";
+        }
+      }
+    </script>
+  
+</body>
+</html>

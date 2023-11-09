@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soal 3</title>
+</head>
+<body>
+    <h1>Menghitung Luas Segitiga</h1>
+    <p>Masukkan nilai alas: <input type="number" id="alas"></p>
+    <p>Masukkan nilai tinggi: <input type="number" id="tinggi"></p>
+    <button onclick="hitungLuas()">Hitung</button>
+    <p id="hasil"></p>
+
+    <script>
+        function hitungLuas() {
+        const alas = parseFloat(document.getElementById("alas").value);
+        const tinggi = parseFloat(document.getElementById("tinggi").value);
+        const hasilLuas = document.getElementById("hasil");
+    
+        if (!isNaN(alas) && !isNaN(tinggi)) {
+            const luas = 0.5 * alas * tinggi;
+            hasilLuas.textContent = "Luas segitiga adalah " + luas;
+        } else {
+            hasilLuas.textContent = "Angka tidak valid.";
+        }
+    }
+      </script>
+</body>
+</html>
